@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess Game UI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="guessnumber.css">
+</head>
+
+<body>
+  <div class="game">
+    <!-- WIN OVERLAY -->
+    <div class="overlay" id="win-overlay">
+      <div class="overlay-card">
+        <h2>🎉 Congratulations !</h2> 
+        <p>You've guessed the correct number !</p>
+        <button id="win-restart" class="btn primary">Play Again</button>
+      </div>
+    </div>
+
+    <!-- LOSE OVERLAY -->
+    <div class="overlay" id="lose-overlay">
+      <div class="overlay-card">
+        <h2>Game Over 💀</h2>
+        <p id="lose-message"></p>
+        <button id="lose-restart" class="btn danger">Try Again</button>
+      </div>
+    </div>
+
+    <!-- Game Area -->
+    <main class="play-area">
+      <h2>Guess the Number</h2>
+      <p class="hint">Between 1 and 100</p>
+
+      <!-- Header -->
+      <header class="top-bar">
+        <span>Attempts: <strong class="attempts">10</strong></span>
+        <div class="top-actions">
+          <button id="restart" class="btn danger hidden">Restart</button>
+          <button id="start" class="btn start-btn">Start Game</button>
+        </div>
+      </header>
+
+      <!-- Input (disabled state visually) -->
+      <form id="game-form">
+        <div class="input-group">
+          <input id="guess-input" type="number" placeholder="Enter your guess" disabled />
+          <button id="submit-btn" class="btn primary" disabled>Submit</button>
+        </div>
+      </form>
+
+      <!-- Indicator -->
+      <div class="indicator">
+        Start the game to begin guessing!
+      </div>
+    </main>
+
+  </div>
+
+  <script src="guessnumber.js"></script>
+</body>
+
+</html>
