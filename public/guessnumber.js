@@ -34,10 +34,8 @@ form.addEventListener('submit', (e) => {
    e.preventDefault();
    let userGuess = Number(input.value);
    if (!userGuess || userGuess < 1 || userGuess > 100) {
-      // alert("Please enter a valid number between 1 and 100.");
       indicator.innerText = "⚠️ Enter a number between 1 and 100";
       input.value = '';
-      // return;
    } else {
       let value = Number(attempt.innerText);
       value -= 1;
@@ -75,8 +73,8 @@ form.addEventListener('submit', (e) => {
 
 function restartGame() {
    randomNumber = Math.floor(Math.random() * 100) + 1;
-   console.log(randomNumber);
-   attempt.innerText = 10;
+   // console.log(randomNumber);
+   attempt.innerText = 5;
    indicator.innerText = 'Game Begins!';
    input.disabled = false;
    input.focus(); // Focus on input field when game starts
