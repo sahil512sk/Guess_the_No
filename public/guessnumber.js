@@ -64,17 +64,11 @@ form.addEventListener('submit', (e) => {
    }
 });
 
-// Difficulty modes
-// Easy (15 attempts)
-// Hard (5 attempts)
-
-// Prevent same guess spam
-// Store previous guesses in an array.
 
 function restartGame() {
    randomNumber = Math.floor(Math.random() * 100) + 1;
    // console.log(randomNumber);
-   attempt.innerText = 5;
+   attempt.innerText = 7;
    indicator.innerText = 'Game Begins!';
    input.disabled = false;
    input.focus(); // Focus on input field when game starts
